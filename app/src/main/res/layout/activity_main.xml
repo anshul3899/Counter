@@ -5,55 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.wordpress.physicsforsmartbrains.www.counter.MainActivity"
-    android:background="#EF9A9A">
+    android:background="#E1BEE7"
+    tools:context="com.wordpress.physicsforsmartbrains.www.counter.MainActivity">
 
 
     <TextView
+        android:id="@+id/count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
         android:text="0"
         android:textAlignment="center"
-        android:id="@+id/count"
-        android:fontFamily="sans-serif-light"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textSize="200sp"
-        android:layout_marginTop="10dp"/>
+        android:textSize="200sp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@+id/count"
         android:layout_centerHorizontal="true"
-        >
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/increment"
-            android:text="+"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            />
+        android:orientation="horizontal">
 
         <Button
+            android:id="@+id/increment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="+"
+            android:textSize="20sp" />
+
+        <Button
             android:id="@+id/decrement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="-"
-            android:textSize="20sp"
-            android:layout_margin="10dp"/>
+            android:textSize="20sp" />
     </LinearLayout>
+
     <Button
+        android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
-        android:textAllCaps="true"
-        android:layout_gravity="center_horizontal"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="30dp"
-        android:id="@+id/reset"
-        />
+        android:text="Reset"
+        android:textAllCaps="true" />
 
 </RelativeLayout>
 
