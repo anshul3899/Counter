@@ -5,9 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 public class MainActivity extends AppCompatActivity {
     private int count = 0;
@@ -32,10 +31,15 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                count = count - 1;
-                String score = new StringBuffer().append(count).toString();
-                TextView textView = (TextView) findViewById(R.id.count);
-                textView.setText(score);
+                if (count == 0) {
+                    Toast.makeText(MainActivity.this,
+                            "count cannot be negative", Toast.LENGTH_SHORT).show();
+                } else {
+                    count = count - 1;
+                    String score = new StringBuffer().append(count).toString();
+                    TextView textView = (TextView) findViewById(R.id.count);
+                    textView.setText(score);
+                }
             }
         });
         reset.setOnClickListener(new View.OnClickListener() {

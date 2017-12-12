@@ -42,7 +42,6 @@
                 android:width="100dp"
                 android:padding="15dp"
                 android:text="@string/minus"
-
                 android:textSize="20sp" />
 
             <Button
